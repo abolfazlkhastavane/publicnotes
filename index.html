@@ -1,0 +1,208 @@
+
+
+    <!DOCTYPE html>
+    <html dir="rtl" lang="fa">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>وبلاگ من</title>
+      <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+      <style>
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: 'Amiri', serif;
+          background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc4 100%);
+          background-attachment: fixed;
+          line-height: 2;
+          padding: 20px;
+          position: relative;
+        }
+        body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: 
+            repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(139, 69, 19, 0.03) 50px, rgba(139, 69, 19, 0.03) 51px),
+            repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(139, 69, 19, 0.03) 50px, rgba(139, 69, 19, 0.03) 51px);
+          pointer-events: none;
+          z-index: 0;
+        }
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+        }
+        h1 {
+          text-align: center;
+          color: #5a3a1a;
+          margin-bottom: 50px;
+          padding: 30px 40px;
+          font-size: 42px;
+          font-weight: 700;
+          background: linear-gradient(135deg, #c9a961 0%, #d4af6a 50%, #c9a961 100%);
+          border-radius: 8px;
+          box-shadow: 
+            0 8px 16px rgba(0,0,0,0.15),
+            inset 0 2px 0 rgba(255,255,255,0.3);
+          position: relative;
+          letter-spacing: 2px;
+        }
+        h1::before,
+        h1::after {
+          content: '❖';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 28px;
+          color: #8b6914;
+        }
+        h1::before {
+          right: 30px;
+        }
+        h1::after {
+          left: 30px;
+        }
+        .post {
+          background: linear-gradient(135deg, #fdfbf7 0%, #f8f4ed 100%);
+          padding: 40px 50px;
+          margin-bottom: 40px;
+          border-radius: 12px;
+          box-shadow: 0 4px 15px rgba(90, 58, 26, 0.15);
+          border: 3px solid #c9a961;
+          border-left: 8px solid #8b6914;
+          border-right: 8px solid #8b6914;
+          position: relative;
+        }
+        .post::before {
+          content: '';
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          left: 15px;
+          bottom: 15px;
+          border: 1px solid rgba(201, 169, 97, 0.3);
+          border-radius: 8px;
+          pointer-events: none;
+        }
+        .post::after {
+          content: '✦';
+          position: absolute;
+          top: -25px;
+          right: 50%;
+          transform: translateX(50%) scale(1.1);
+          font-size: 24px;
+          color: #8b6914;
+          background:linear-gradient(135deg, #fdfbf7 0%, #f8f4ed 100%);
+          padding: 0 15px;
+          border-radius:50px;
+          border: 1px solid #c9a961;
+          padding-top: 1px;
+        }
+        .post-date {
+          color: #8b6914;
+          font-size: 16px;
+          margin-bottom: 20px;
+          text-align: left;
+          font-weight: 600;
+          letter-spacing: 1px;
+          border-bottom: 2px solid #c9a961;
+          padding-bottom: 10px;
+          display: inline-block;
+        }
+        .post-date::before {
+          content: '◈ ';
+          color: #c9a961;
+        }
+        .post-content {
+          color: #3a2a1a;
+          font-size: 20px;
+          white-space: pre-wrap;
+          line-height: 1;
+          padding:10px 0px;
+          text-align: justify;
+          position: relative;
+          z-index: 1;
+        }
+        .no-posts {
+          text-align: center;
+          color: #8b6914;
+          padding: 80px 40px;
+          background: linear-gradient(135deg, #fdfbf7 0%, #f8f4ed 100%);
+          border-radius: 12px;
+          border: 3px solid #c9a961;
+          font-size: 22px;
+          box-shadow: 0 4px 15px rgba(90, 58, 26, 0.15);
+        }
+        .no-posts::before {
+          content: '✦ ✦ ✦';
+          display: block;
+          margin-bottom: 20px;
+          font-size: 28px;
+          color: #c9a961;
+        }
+        @media (max-width: 768px) {
+          h1 {
+            font-size: 32px;
+            padding: 20px 30px;
+          }
+          h1::before,
+          h1::after {
+            font-size: 20px;
+          }
+          h1::before {
+            right: 15px;
+          }
+          h1::after {
+            left: 15px;
+          }
+          .post {
+            padding: 30px 25px;
+          }
+          .post-content {
+            font-size: 18px;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>یادداشت خسته...</h1>
+        
+        <article class="post">
+          <div class="post-date">۱۴۰۴/۱۱/۱۰</div>
+          <div class="post-content">آنان 
+<br>می‌رقصند
+<br>می‌خندند
+<br>    و زنده‌اند
+<br>ما
+<br>مرده‌ایم
+<br>که مبادا بمیریم
+<br>رفتند
+<br>    و زنده‌اند
+<br>مردند
+<br>که مبادا بمیرند
+<br>و نرقصند
+<br>و نخندند
+<br>    و زنده‌اند</div>
+        </article>
+      
+        <article class="post">
+          <div class="post-date">۱۴۰۴/۱۱/۹</div>
+          <div class="post-content">کاش بیشتر از اینکه عاشق هم باشیم
+<br>عاشق بودن با هم باشیم</div>
+        </article>
+      
+      </div>
+    </body>
+    </html>
+  
